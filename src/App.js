@@ -29,7 +29,7 @@ const App = () => {
                     <div className="item-sub-heading">{item.Subheading}</div>
                   </div>
                   <div className="line-break"/>
-                  <div className="item-price">{'$' + item.Price}</div>
+                  <div className="item-price">{Number(item.Price).toLocaleString('en')}</div>
                 </div>
               </div>
             );
