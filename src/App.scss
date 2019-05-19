@@ -1,11 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
 body {
   background-color: #C2DFFF;
   font-family: 'Open Sans', sans-serif;
 }
 
 .container {
-  max-width: 1335px;
-  margin: 0 auto;
+  max-width: 1440px;
 }
 
 .flex-row {
@@ -14,41 +15,40 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin: 4% 0% 0% 5%;
 
   &-item {
-    height: 500px;
     -ms-flex-preferred-size: 18%;
-        flex-basis: 18%;
-    -ms-flex: auto;
-    // width: 259px;
-    margin: 10px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    flex-basis: 18%;
+    margin: 0% 1.2% 2% 0%;
   }
 }
 
 .item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   background-color: white;
   height: 100%;
   width: 100%;
   position: relative;
-  border-radius: 4px;
+  border-radius: 8px;
   border: 1px solid #C0C0C0;
   box-shadow: 3px 3px rgba(128,128,128, 0.2);
 }
 
 .item-image{
   position: relative;
-  height: 45%;
+  flex-basis: 200px;
   width: 100%;
   overflow: hidden;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 
   &-bridge {
     min-width: 100%;
@@ -57,34 +57,33 @@ body {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 
   &-tile {
-    position: relative;
-    top:0;
-    left:0;
     max-height: 100%;
     max-width: 100%;
+    object-fit: cover;
   }
 
   &-place-holder {
     position: absolute;
-    top: 17%;
-    left: 10%;
-    max-height: 80%;
-    max-width: 80%;
+    top: 15%;
+    left: 15%;
+    height: 70%;
+    width: 70%;
   }
 }
 
 .item-content {
+  flex-basis: auto;
   padding: 20px 20px 20px 20px;
 }
 
 .item-heading {
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 26px;
   font-weight: 500;
   margin-bottom: 20px;
@@ -93,7 +92,11 @@ body {
 .item-sub-heading {
   text-transform: capitalize;
   color: rgba(0,0,0, 0.7);
-  font-size: 14px;
+  font-size: 16px;
+}
+
+.item-footer {
+  flex-basis: 50px;
 }
 
 .line-break {
@@ -101,7 +104,7 @@ body {
   width: 82%;
   bottom: 40px;
   margin-left: 9%;
-  border-top: 3px solid rgba(211,211,211, 0.3);
+  border-top: 3px solid rgba(160, 157, 157, 0.3);
 }
 
 .item-price {
@@ -112,34 +115,51 @@ body {
   margin: 10px 10px 5px 0px;
   font-size: 20px;
   font-weight: 600;
-  color: 	#3CB371;
+  color: rgb(11, 184, 11);
 }
 
 .item-price::before {
   content:"$";
 }
 
-@media(max-width: 1333px) {
-  .grid-item {
-    -ms-flex-preferred-size: 33.33%;
-        flex-basis: 33.33%;
+@media(max-width: 1024px) {
+  .flex-row{
+    margin-left: 1%;
+    &-item {
+      -ms-flex-preferred-size: 23.5%;
+      flex-basis: 23.5%;
+      margin: 0% 1.5% 2.5% 0%;
+    }
   }
 }
-@media(max-width: 1073px) {
-   .grid-item {
-    -ms-flex-preferred-size: 33.33%;
-        flex-basis: 33.33%;
+@media(max-width: 768px) {
+  .flex-row{
+    margin-left: 2.5%;
+    &-item {
+      -ms-flex-preferred-size: 31%;
+      flex-basis: 31%;
+      margin: 0% 2% 3% 0%;
+    }
   }
 }
-@media(max-width: 815px) {
-  .grid-item {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+
+@media(max-width: 425px) {
+  .flex-row{
+    &-item {
+      -ms-flex-preferred-size: 47%;
+      flex-basis: 47%;
+      margin: 0% 3% 3.5% 0%;
+    }
   }
 }
-@media(max-width: 555px) {
-  .grid-item {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+
+@media(max-width: 320px) {
+  .flex-row{
+    margin-left: 3%;
+    &-item {
+      -ms-flex-preferred-size: 95%;
+      flex-basis: 95%;
+      margin: 0% 3% 4% 0%;
+    }
   }
 }

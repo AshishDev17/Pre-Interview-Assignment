@@ -28,8 +28,10 @@ const App = () => {
                     <div className="item-heading">{item.Heading}</div>
                     <div className="item-sub-heading">{item.Subheading}</div>
                   </div>
-                  <div className="line-break"/>
-                  <div className="item-price">{Number(item.Price).toLocaleString('en')}</div>
+                  <div className="item-footer">
+                    <div className="line-break"/>
+                    <div className="item-price">{Number(item.Price).toLocaleString('en')}</div>
+                  </div>
                 </div>
               </div>
             );
