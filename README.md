@@ -15,6 +15,8 @@ breakpoints. Use your discretion on what changes in alternate breakpoint.
 ![Alt text](/public/pre-assignment.png?raw=true "Optional Title")
 
 
+## Link for the deployed working assignment: https://pre-interview-assignment-2019.herokuapp.com/
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
