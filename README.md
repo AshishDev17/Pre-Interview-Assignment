@@ -12,6 +12,10 @@ breakpoints. Use your discretion on what changes in alternate breakpoint.
 • A CSS preprocessor and front end/CSS framework are encouraged. We currently use SASS and a derivation of Bootstrap.
 • Page should use JavaScript to generate core markup, preferably using a JavaScript Framework. We currently use ReactJS but feel free to use any that you are familiar with (ie Mustache, Angular, Ember, Vue ... )
 
+![Alt text](/public/pre-assignment.png?raw=true "Optional Title")
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
