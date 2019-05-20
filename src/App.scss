@@ -6,7 +6,18 @@ body {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1640px;
+}
+
+.sort-options-container {
+  margin: 2% 0% 0% 7%;
+  font-size: 16px;
+}
+
+.sort-drop-down {
+  border: 1px solid #C0C0C0;
+  width: 150px;
+  margin-left: 5px;
 }
 
 .flex-row {
@@ -20,7 +31,7 @@ body {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin: 4% 0% 0% 5%;
+  margin: 2% 0% 0% 7%;
 
   &-item {
     -ms-flex-preferred-size: 18%;
@@ -30,8 +41,15 @@ body {
 }
 
 .item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   background-color: white;
   height: 100%;
@@ -39,11 +57,13 @@ body {
   position: relative;
   border-radius: 8px;
   border: 1px solid #C0C0C0;
+  -webkit-box-shadow: 3px 3px rgba(128,128,128, 0.2);
   box-shadow: 3px 3px rgba(128,128,128, 0.2);
 }
 
 .item-image{
   position: relative;
+  -ms-flex-preferred-size: 200px;
   flex-basis: 200px;
   width: 100%;
   overflow: hidden;
@@ -64,6 +84,7 @@ body {
   &-tile {
     max-height: 100%;
     max-width: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
   }
 
@@ -77,6 +98,7 @@ body {
 }
 
 .item-content {
+  -ms-flex-preferred-size: auto;
   flex-basis: auto;
   padding: 20px 20px 20px 20px;
 }
@@ -96,6 +118,7 @@ body {
 }
 
 .item-footer {
+  -ms-flex-preferred-size: 50px;
   flex-basis: 50px;
 }
 
@@ -122,7 +145,21 @@ body {
   content:"$";
 }
 
+@media(max-width: 1440px) {
+  .sort-options-container {
+    margin-left: 5%;
+  }
+
+  .flex-row{
+    margin-left: 5%;
+  }
+}
+
 @media(max-width: 1024px) {
+  .sort-options-container {
+    margin-left: 1%;
+  }
+
   .flex-row{
     margin-left: 1%;
     &-item {
@@ -132,7 +169,12 @@ body {
     }
   }
 }
+
 @media(max-width: 768px) {
+  .sort-options-container {
+    margin-left: 2.5%;
+  }
+
   .flex-row{
     margin-left: 2.5%;
     &-item {
@@ -144,22 +186,30 @@ body {
 }
 
 @media(max-width: 425px) {
+  .sort-options-container {
+    margin-left: 25%;
+  }
+
   .flex-row{
     &-item {
       -ms-flex-preferred-size: 47%;
       flex-basis: 47%;
-      margin: 0% 3% 3.5% 0%;
+      margin: 2% 3% 3.5% 0%;
     }
   }
 }
 
 @media(max-width: 320px) {
+  .sort-options-container {
+    margin-left: 14%;
+  }
+
   .flex-row{
     margin-left: 3%;
     &-item {
       -ms-flex-preferred-size: 95%;
       flex-basis: 95%;
-      margin: 0% 3% 4% 0%;
+      margin: 3% 3% 4% 0%;
     }
   }
 }

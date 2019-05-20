@@ -1,3 +1,17 @@
+#Goals (in priority order):
+1. Page should resemble the comp. If front end/CSS framework you choose has components that resemble but do not exactly match comp, that is fine
+2. Data should be fed by included JSON.
+3. Page should be responsive, demonstrating change in layout between at least two
+breakpoints. Use your discretion on what changes in alternate breakpoint.
+
+##Extra Credit:
+1. Add ability to sort based off Heading, Subheading, or Price. This functionality is not represented in comp, use your discretion on how to add it.
+2. Limit Cards to one row while preserving number of columns, then add pagination to see other results. This functionality is not represented in comp, use your discretion on how to add it.
+
+##Technology:
+• A CSS preprocessor and front end/CSS framework are encouraged. We currently use SASS and a derivation of Bootstrap.
+• Page should use JavaScript to generate core markup, preferably using a JavaScript Framework. We currently use ReactJS but feel free to use any that you are familiar with (ie Mustache, Angular, Ember, Vue ... )
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
